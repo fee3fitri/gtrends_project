@@ -12,6 +12,7 @@
   <script src="./dist/main.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://kit.fontawesome.com/e4095fb22d.js" crossorigin="anonymous"></script>
+  
   <script type="text/javascript">
     google.charts.load('current', {
       'packages':['geochart'],
@@ -19,7 +20,7 @@
     google.charts.setOnLoadCallback(drawRegionsMap);
 
     function drawRegionsMap() {
-      var data = google.visualization.arrayToDataTable([
+      let data = google.visualization.arrayToDataTable([
         ['Country', 'Search volume/day'],
         ['United States', 500000000],
         ['Canada', 200000000],
@@ -37,12 +38,13 @@
         ['Indonesia', 425000000]
       ]);
 
-      var options = {
+      let options = {
         colorAxis: {colors: ['#b2ccf7', '#2272f5']},
-        datalessRegionColor: '#ebf0f7'
+        datalessRegionColor: '#ebf0f7',
+        backgroundColor: ''
       };
 
-      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+      let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
       chart.draw(data, options);
     }
@@ -63,19 +65,26 @@
   </header>
   
   <main>
-    <!-- Search page section -->
-    <!-- <section id="search-page">
-      <h1>gTrends</h1>
-      <form action="" method=""GET>
-        <input type="text" id="search-bar" name="search-bar" placeholder="Enter your keyword">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <br>
-        <button type="submit">Find Trends</button>
-      </form>
-    </section> -->
-
     <!-- Interactive map section -->
-    <section id="regions_div"></section>
+    <section id ="map-results">
+      <div id="map-container">
+        <div id="regions_div"></div>
+      </div>
+
+      <div id="trends-container">
+        <div class="trend-box">
+          <div class="trend-img">
+            <img src="" alt="">
+          </div>
+          <div class="trend-content">
+            <h2>Omonia vs Man United</h2>
+            <!-- <p>Omonia vs Man United result, highlights, and analysis...</p> -->
+            <h4>20k+ searches</h4>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
 
   </main>
 </body>

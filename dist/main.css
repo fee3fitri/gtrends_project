@@ -4,15 +4,12 @@
 
 /* Universal CSS */
   body {
-  padding: 0 5vw;
-  /* background-color: #4285f4; */
-  /* color: #f7f7f7; */
-  color: #4285f4;
+  padding: 0 3vw;
+  background-color: #f7f7f7;
 }
 
-h1 {
-  font-size: 4em;
-  margin-bottom: 3vh;
+h3 {
+  font-size: 1.75vw;
 }
 
 /* Header section */
@@ -20,45 +17,63 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  color: #4285f4;
 }
 
 nav a {
   margin: 0 10px;
 }
 
-/* Search page section */
-#search-page {
-  margin-top: 15vh;
-  text-align: center;
+/* Interactive map section */
+
+/* Map style */
+#map-results {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4vh;
 }
 
-#search-page input {
-  margin-bottom: 3vh;
-  padding: 10px;
-  width: 29vw;
-  background-color: rgba(255,255,255,60%);
-  border-radius: 5px;
-  border: 0;
-  font-size: 1.1em;
+#map-results #regions_div {
+  width: 900px;
+  margin-right: 5vw;
 }
 
-#search-page button {
-  padding: 5px 20px;
-  border-radius: 5px;
-  border: 0;
-  font-size: 1.1em;
+/* Trends style */
+#trends-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#map-results #trends-container .trend-box {
+  background-color: white;
+  padding: 5px 30px;
+  border:1px solid #d7d7d7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 }
 
+#map-results #trends-container .trend-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
-/* Interactive map section */
-/* #regions_div {
-  width: 900px;
-  height: 500px;
-} */
+#map-results #trends-container .trend-box .trend-img {
+  background-color: black;
+  width: 20%;
+  height: 70px;
+  margin-right: 5%;
+}
+
+#map-results #trends-container .trend-box i {
+  margin-left: 5%;
+}
 
 /* Icons */
 .fa-brands {
-  font-size: 30px;
+  font-size: 1.75vw;
   color: #4285f4;
 }
