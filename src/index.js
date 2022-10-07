@@ -1,5 +1,6 @@
-const Map = require('./scripts/map');
+import Map from "./scripts/map"
 
 document.addEventListener("DOMContentLoaded", () => {
-  const map = document.getElementById("regions_div");
+  const mapContainer = document.getElementById("regions_div");
+  const map = new Map();
 });

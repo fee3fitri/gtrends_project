@@ -13,39 +13,6 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://kit.fontawesome.com/e4095fb22d.js" crossorigin="anonymous"></script>
   
-  <script type="text/javascript">
-    google.charts.load('current', {
-      'packages':['geochart'],
-    });
-    google.charts.setOnLoadCallback(drawRegionsMap);
-
-    function drawRegionsMap() {
-      let query = new google.visualization.Query(
-        'https://docs.google.com/spreadsheets/d/1LOD5EAr5K5u45ORZiafyk5k96aI_ByzYk-NkJM0k6do/gviz/tq?gid=0&headers=1&range=A1:B15'
-      );
-      query.send(handleQueryResponse);
-    }
-      
-    function handleQueryResponse(response) {
-      if (response.isError()) {
-        alert(`Error in query: ${response.getMessage()} + ${response.getDetailedMessage()}`);
-        return;
-      }
-
-      let data = response.getDataTable();
-      let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-      let options = {
-        colorAxis: {colors: ['#b2ccf7', '#2272f5']},
-        datalessRegionColor: '#ebf0f7',
-        backgroundColor: ''
-      };
-
-
-      chart.draw(data, options);
-    }
-  </script>
-
   <title>gTrends</title>
 </head>
 
@@ -75,7 +42,6 @@
             </div>
             <div class="trend-text">
               <h2>Omonia vs Man United</h2>
-              <!-- <p>Omonia vs Man United result, highlights, and analysis...</p> -->
               <h4>20k+ searches</h4>
             </div>
           </div>
