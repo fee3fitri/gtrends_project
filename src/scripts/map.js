@@ -3,8 +3,8 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(drawRegionsMap);
 
-var drawRegionsMap = () => {
-  var data = google.visualization.arrayToDataTable([
+function drawRegionsMap () {
+  let data = google.visualization.arrayToDataTable([
     ['Country', 'Search volume/day'],
     ['United States', 500000000],
     ['Canada', 200000000],
@@ -24,10 +24,11 @@ var drawRegionsMap = () => {
 
   let options = {
     colorAxis: {colors: ['#b2ccf7', '#2272f5']},
-    datalessRegionColor: '#ebf0f7'
+    datalessRegionColor: '#ebf0f7',
+    backgroundColor: ''
   };
 
-  var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+  let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
   chart.draw(data, options);
 }

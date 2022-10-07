@@ -48,7 +48,7 @@ nav a {
 #map-results #trends-container .trend-box {
   background-color: white;
   padding: 5px 30px;
-  border:1px solid #d7d7d7;
+  border: 1px solid #d7d7d7;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,15 +57,14 @@ nav a {
 
 #map-results #trends-container .trend-content {
   display: flex;
-  justify-content: left;
   align-items: center;
 }
 
 #map-results #trends-container .trend-box .trend-img {
   background-color: black;
-  width: 20%;
+  width: 70px;
   height: 70px;
-  margin-right: 5%;
+  margin-right: 30px;
 }
 
 #map-results #trends-container .trend-box i {

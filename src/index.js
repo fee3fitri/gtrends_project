@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('test');
+  const map = document.getElementById("regions_div");
 });
