@@ -1,0 +1,57 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+
+/* Universal CSS */
+  body {
+  padding: 0 5vw;
+  background-color: #4285f4;
+  color: #f7f7f7;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 3vh;
+}
+
+/* Header section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+/* Search page section */
+#search-page {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+#search-page input {
+  margin-bottom: 3vh;
+  padding: 10px;
+  width: 29vw;
+  background-color: rgba(255,255,255,60%);
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.1em;
+}
+
+#search-page button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+
+/* Icons */
+.fa-brands {
+  font-size: 30px;
+  color: #f7f7f7;
+}
