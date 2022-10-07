@@ -1,3 +1,8 @@
+class Map {
+  
+}
+
+
 google.charts.load('current', {
   'packages':['geochart'],
 });
@@ -32,3 +37,5 @@ function drawRegionsMap () {
 
   chart.draw(data, options);
 }
+
+module.exports = Map;
