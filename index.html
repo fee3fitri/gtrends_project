@@ -7,9 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="./dist/main.css">
-  <!-- Font Awesome -->
+
+  <!-- JS scripts -->
   <script src="./dist/main.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://kit.fontawesome.com/e4095fb22d.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages':['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Search volume/day'],
+        ['United States', 500000000],
+        ['Canada', 200000000],
+        ['United Kingdom', 250000000],
+        ['Ireland', 5000000],
+        ['South Africa', 300000000],
+        ['Nigeria', 3000000],
+        ['India', 500000000],
+        ['Songapore', 10000000],
+        ['Australia', 150000000],
+        ['New Zealand', 5000000],
+        ['Brazil', 450000000],
+        ['Russia', 100000000],
+        ['China', 500000000],
+        ['Indonesia', 425000000]
+      ]);
+
+      var options = {
+        colorAxis: {colors: ['#b2ccf7', '#2272f5']},
+        datalessRegionColor: '#ebf0f7'
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
 
   <title>gTrends</title>
 </head>
@@ -27,7 +64,7 @@
   
   <main>
     <!-- Search page section -->
-    <section id="search-page">
+    <!-- <section id="search-page">
       <h1>gTrends</h1>
       <form action="" method=""GET>
         <input type="text" id="search-bar" name="search-bar" placeholder="Enter your keyword">
@@ -35,8 +72,10 @@
         <br>
         <button type="submit">Find Trends</button>
       </form>
-    </section>
+    </section> -->
 
+    <!-- Interactive map section -->
+    <section id="regions_div"></section>
 
   </main>
 </body>
