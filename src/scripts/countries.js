@@ -94,7 +94,5 @@ const COUNTRIES = {
 
 
 export default class Countries {
-  constructor() {
-    
-  }
+  constructor() {}
 }

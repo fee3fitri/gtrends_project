@@ -35,7 +35,7 @@ export default class Trends {
     let month = months[this.today.getMonth()];
     let date = this.today.getDate();
     let year = this.today.getFullYear();
-    
+
     this.currentDate.innerHTML = `${day}, ${month} ${date}, ${year}`;
   }
 }

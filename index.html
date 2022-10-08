@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Style link -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
   <link rel="stylesheet" href="./dist/main.css">
 
   <!-- JS scripts -->
@@ -19,7 +21,7 @@
 <body>
   <!-- Header section -->
   <header>
-    <h3>gTrends</h3>
+    <h3 id="logo">gTrends</h3>
     <nav>
       <a href="#"><i class="fa-brands fa-linkedin"></i></a>
       <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -31,7 +33,7 @@
     <!-- Interactive map section -->
     <section id ="map-results">
       <div id="map-container">
-        <div id="regions_div"></div>
+        <div id="regions_div" style="width: 900px;"></div>
       </div>
 
       <div id="trends-container">
