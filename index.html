@@ -30,8 +30,12 @@
   </header>
   
   <main>
+    <section id="hello">
+      <h1>Welcome to gTrends</h1>
+    </section>
+
     <!-- Interactive map section -->
-    <section id ="map-results">
+    <section id ="map-results" class="page">
       <div id="map-container">
         <div id="regions_div" style="width: 900px;"></div>
       </div>
@@ -39,21 +43,19 @@
       <div id="trends-container">
         <h2>Daily Search Trends</h2>
         <p id="current-date"></p>
-        <div class="trend-box">
-          <div class="trend-content">
-            <div class="trend-img">
-              <img src="" alt="">
-            </div>
-            <div class="trend-text">
-              <h4>Omonia vs Man United</h4>
-              <h5>20k+ searches</h5>
-            </div>
-          </div>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
+        <div class="trend-box"></div>  
       </div>
     </section>
-
   </main>
+
+  <!-- Slider Navigation -->
+  <footer >
+    <button class="next button_carousel"><a href="#"></a></button>
+    <div class="circles_nav">
+      <button class="carousel_circle"><a href="#"></a></button>
+      <button class="carousel_circle"><a href="#"></a></button>
+    </div>
+    <button class="previous button_carousel"><a href="#"></a></button>
+  </footer>
 </body>
 </html>

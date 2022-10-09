@@ -10,11 +10,6 @@ h2 {
   margin-bottom: 2vh;
 }
 
-h4 {
-  font-size: 1.3vw;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
 
 /* Header section */
 header {
@@ -35,12 +30,17 @@ nav a {
 }
 
 
+
+
+
 /* Interactive map section */
 /* Map style */
 #map-results {
   display: flex;
   justify-content: space-between;
   margin-top: 4vh;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 #map-results #regions_div {
@@ -64,9 +64,13 @@ nav a {
   padding: 10px 20px;
   border: 1px solid #d7d7d7;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   cursor: pointer;
+}
+
+#map-results #trends-container .trend-box p {
+  display: block;
 }
 
 #map-results #trends-container .trend-content {
@@ -83,6 +87,59 @@ nav a {
 
 #map-results #trends-container .trend-box i {
   margin-left: 5%;
+}
+
+
+/* Buttons */
+.button_carousel {
+  position: absolute;
+  bottom: 1vh;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2vw;
+
+}
+
+.button_carousel:hover {
+  font-size: 2.5vw;
+}
+
+.button_carousel.previous {
+  left: 40vw;
+}
+
+.button_carousel.next {
+  right: 40vw;
+}
+
+.button_carousel.previous::before {
+  content: "<";
+}
+
+.button_carousel.next::before {
+  content: ">";
+}
+
+.circles_nav {
+  position: absolute;
+  bottom: 2.5vh;
+  left: 48vw;
+}
+
+.circles_nav .carousel_circle {
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0,0,0,15%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.circles_nav .carousel_circle:hover {
+  background: rgba(0,0,0,30%);
+
 }
 
 /* Icons */
