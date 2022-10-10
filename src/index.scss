@@ -1,4 +1,9 @@
 /* Universal CSS */
+html, body {
+  position: relative;
+  height: 90vh;
+}
+
 body {
   padding: 5vh 3vw;
   background-color: #f7f7f7;
@@ -29,18 +34,12 @@ nav a {
   margin: 0 10px;
 }
 
-
-
-
-
 /* Interactive map section */
 /* Map style */
 #map-results {
   display: flex;
   justify-content: space-between;
   margin-top: 4vh;
-  max-height: 100vh;
-  max-width: 100vw;
 }
 
 #map-results #regions_div {
@@ -141,6 +140,19 @@ nav a {
   background: rgba(0,0,0,30%);
 
 }
+
+
+/* Swiper Style */
+.swiper {
+  width: 92vw;
+  height: 90vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Icons */
 .fa-brands {

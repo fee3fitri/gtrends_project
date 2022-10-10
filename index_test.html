@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Style link -->
   <link rel="stylesheet" href="./src/styles/reset.css">
   <link rel="stylesheet" href="./dist/main.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
   <!-- JS scripts -->
   <script src="./dist/main.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://kit.fontawesome.com/e4095fb22d.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   
   <title>gTrends</title>
 </head>
 
 <body>
-  <header>
   <!-- Header section -->
+  <header>
     <h3 id="logo">gTrends</h3>
     <nav>
       <a href="#"><i class="fa-brands fa-linkedin"></i></a>
@@ -27,19 +31,20 @@
       <a href="#"><i class="fa-brands fa-facebook"></i></a>
     </nav>
   </header>
+  
 
-  <div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-
-      <!-- Slides -->
+    <!-- Slider main container -->
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
+      
+      <!-- Pages -->
       <!-- Welcome section -->
-      <section class="swiper-slide" id="hello">
+      <section class="swiper-slide" id="hello" >
         <h1>Welcome to gTrends</h1>
       </section>
-
+      
       <!-- Interactive map section -->
-      <section class="swiper-slide" id ="map-results">
+      <section id ="map-results" class="swiper-slide">
         <div id="map-container">
           <div id="regions_div" style="width: 900px;"></div>
         </div>
@@ -50,15 +55,27 @@
           <div class="trend-box"></div>  
         </div>
       </section>
-      <div class="swiper-slide">Slide 3</div>
+
     </div>
 
-    <!-- Slider section -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
 
-    <!-- Slider pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
+
+  <!-- Slider Navigation -->
+  <div class="swiper-pagination"></div>
+
+
+  <script>
+    const newSwiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      speed: 500,
+      spaceBetween: 100,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+    });
+  </script>
 </body>
 </html>

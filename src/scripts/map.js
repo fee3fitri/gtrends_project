@@ -4,7 +4,7 @@ const COUNTRIES = [
     {'trends': 'Omonia vs Man United', 'volume': 500000},
     {'trends': 'Pixel 7', 'volume': 200000},
     {'trends': 'Mario movie trailer', 'volume': 200000},
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 200000}
+    {'trends': 'Arsenal vs bodø/glimt', 'volume': 200000},
 ]},
   {"Canada": [
     {'trends': 'Omonia vs Man United', 'volume': 100000},
