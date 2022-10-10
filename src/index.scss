@@ -15,6 +15,11 @@ h2 {
   margin-bottom: 2vh;
 }
 
+h3 {
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+
 
 /* Header section */
 header {
@@ -40,7 +45,7 @@ nav a {
   align-items: center;
   margin-top: -5vh;
   color: #4285f4;
-  font-size: 8vw;
+  font-size: 5vw;
 }
 
 /* Interactive map section */
@@ -75,6 +80,7 @@ nav a {
   align-items: flex-start;
   flex-direction: column;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 #map-results #trends-container .trend-box p {

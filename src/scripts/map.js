@@ -125,20 +125,23 @@ export default class Map {
     const clickHandler = () => {
       const selection = chart.getSelection();
       const trendBox = document.querySelector(".trend-box");
-      let country, trendsObj, countryTrends,countryNode;
+      const countryBox = document.querySelector("#country");
+      let country, trendsObj;
   
       for (let item of selection) {
         const row = item.row;
         country = data.getValue(row, 0);
         trendsObj = Object.values((COUNTRIES[row]))[0];
       };
-      
+
+      countryBox.innerHTML = country;
+
       trendBox.innerHTML = `
-      <div class="trend-content"><p>${Object.values(trendsObj[0])}</p></div>
-      <div class="trend-content"><p>${Object.values(trendsObj[1])}</p></div>
-      <div class="trend-content"><p>${Object.values(trendsObj[2])}</p></div>
-      <div class="trend-content"><p>${Object.values(trendsObj[3])}</p></div>
-      <div class="trend-content"><p>${Object.values(trendsObj[4])}</p></div>`
+      <p>${Object.values(trendsObj[0])[0]}</p>
+      <p>${Object.values(trendsObj[1])[0]}</p>
+      <p>${Object.values(trendsObj[2])[0]}</p>
+      <p>${Object.values(trendsObj[3])[0]}</p>
+      <p>${Object.values(trendsObj[4])[0]}</p>`
     };
     
     chart.draw(data, options);
