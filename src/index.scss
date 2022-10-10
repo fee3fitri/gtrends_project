@@ -34,6 +34,15 @@ nav a {
   margin: 0 10px;
 }
 
+
+/* Welcome section */
+#hello {
+  align-items: center;
+  margin-top: -5vh;
+  color: #4285f4;
+  font-size: 8vw;
+}
+
 /* Interactive map section */
 /* Map style */
 #map-results {
@@ -89,68 +98,80 @@ nav a {
 }
 
 
-/* Buttons */
-.button_carousel {
-  position: absolute;
-  bottom: 1vh;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 2vw;
-
-}
-
-.button_carousel:hover {
-  font-size: 2.5vw;
-}
-
-.button_carousel.previous {
-  left: 40vw;
-}
-
-.button_carousel.next {
-  right: 40vw;
-}
-
-.button_carousel.previous::before {
-  content: "<";
-}
-
-.button_carousel.next::before {
-  content: ">";
-}
-
-.circles_nav {
-  position: absolute;
-  bottom: 2.5vh;
-  left: 48vw;
-}
-
-.circles_nav .carousel_circle {
-  margin: 0 5px;
-  border-radius: 50%;
-  border: 0;
-  background: rgba(0,0,0,15%);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.circles_nav .carousel_circle:hover {
-  background: rgba(0,0,0,30%);
-
-}
-
-
 /* Swiper Style */
+/* Swiper Container */
 .swiper {
   width: 92vw;
   height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0, 0);
+  scrollbar-width: none;
+}
+
+.swiper-pointer-events.swiper-vertical {
+  touch-action: pan-x;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+
+
+/* Swiper Bullets */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+}
+
+.swiper-pagination-bullets {
+  bottom: 2vh;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #4285f4;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
 }
 
 
