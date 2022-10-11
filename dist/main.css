@@ -2,6 +2,11 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 /* Universal CSS */
+:root {
+  --color: #4285f4;
+  --bg-color: #f7f7f7;
+}
+
 html, body {
   position: relative;
   height: 90vh;
@@ -9,7 +14,9 @@ html, body {
 
 body {
   padding: 5vh 3vw;
-  background-color: #f7f7f7;
+  background: var(--bg-color);
+  overflow: hidden;
+  color: #2c394f;
 }
 
 h2 {
@@ -35,7 +42,7 @@ header {
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  color: #4285f4;
+  color: var(--color);
 }
 
 header #logo {
@@ -48,13 +55,69 @@ nav a {
 }
 
 /* Welcome section */
-#hello {
+#welcome {
   align-items: center;
   margin-top: -5vh;
-  color: #4285f4;
+  color: var(--color);
   font-size: 5vw;
+  flex-direction: column;
+  justify-content: center;
 }
 
+#welcome h1 {
+  position: relative;
+  padding-right: 10px;
+  margin-bottom: 5vh;
+}
+
+#welcome h1::before,
+#welcome h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: calc(100% + 10px);
+  background: var(--bg-color);
+}
+
+#welcome h1::before {
+  animation: typing 5s steps(19) 1s forwards;
+  border-left: 5px solid var(--color);
+}
+
+#welcome h1::after {
+  animation: typing 5s steps(19) 1s forwards, blink 500ms infinite;
+}
+
+#welcome h2 {
+  color: #2c394f;
+  opacity: 0;
+  transform: translateY(3vh);
+  animation: fadeIn 2s ease 5.5s forwards;
+}
+
+/* Animation */
+@keyframes typing {
+  80% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  100% {
+    background: transparent;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Interactive map section */
 /* Map style */
 #map-results {
@@ -164,7 +227,7 @@ nav a {
   height: 15px;
   display: inline-block;
   border-radius: 50%;
-  background: #4285f4;
+  background: var(--color);
   opacity: 0.3;
   cursor: pointer;
 }
@@ -184,5 +247,5 @@ nav a {
 /* Icons */
 .fa-brands {
   font-size: 1.5em;
-  color: #4285f4;
+  color: var(--color);
 }

@@ -4,7 +4,7 @@ export default class Slider {
   constructor() {
     this.swiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      speed: 300,
+      speed: 900,
       spaceBetween: 100,
       loop: true,
       mousewheel: true,

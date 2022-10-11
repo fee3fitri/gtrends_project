@@ -1,73 +1,93 @@
 const COUNTRIES = [
   {"United States": {
     'trends': 'Broncos', 
-    'volume': 1000000
+    'volume': 1000000,
+    'src': 'broncos'
   }},
   {"Canada": {
     'trends': 'Omonia vs Man United', 
-    'volume': 100000
+    'volume': 100000,
+    'src': 'omonia_vs_man_united'
   }},
   {"United Kingdom": {
     'trends': 'Arsenal vs bodø/glimt', 
-    'volume': 500000
+    'volume': 500000,
+    'src': 'arsenal_vs_glimt'
   }},
   {"Ireland": {
     'trends': 'Arsenal vs bodø/glimt', 
-    'volume': 20000
+    'volume': 20000,
+    'src': 'arsenal_vs_glimt'
   }},
   {"South Africa": {
     'trends': 'Arsenal vs bodø/glimt', 
-    'volume': 100000
+    'volume': 100000,
+    'src': 'arsenal_vs_glimt'
   }},
-  {"Nigeria": {'trends': 'Chelsea vs Milan', 
-    'volume': 200000
+  {"Nigeria": {
+    'trends': 'Chelsea vs Milan', 
+    'volume': 200000,
+    'src': 'chelsea_vs_milan'
   }},
   {"India": {
     'trends': 'Cricket Live', 
-    'volume': 1000000
+    'volume': 1000000,
+    'src': 'cricket'
   }},
   {"Singapore": 
     {'trends': 'Real Madrid', 
-    'volume': 20000
+    'volume': 20000,
+    'src': 'real_madrid'
   }},
   {"Australia": {
     'trends': 'Omonia vs Man United', 
-    'volume': 100000
+    'volume': 100000,
+    'src': 'real_madrid'
   }},
   {"New Zealand": {
     'trends': 'Omonia vs Man United', 
-    'volume': 20000
+    'volume': 20000,
+    'src': 'omonia_vs_man_united'
   }},
   {"Brazil": 
     {'trends': 'Alexandre de Moraes', 
-    'volume': 200000},
-  },
+    'volume': 200000,
+    'src': 'alexandre_de_moraes'
+}},
   {"Russia": {
     'trends': 'Паша Техник', 
-    'volume': 100000
+    'volume': 100000,
+    'src': 'pasha_tehnik'
   }},
   {"Indonesia": {
     'trends': 'Maulid Nabi 2022', 
-    'volume': 200000
+    'volume': 200000,
+    'src': 'maulid_nabi'
   }},
   {"Austria": {
-    'trends': 'Mostafa El-Abbadi', 'volume': 200000
+    'trends': 'Mostafa El-Abbadi', 
+    'volume': 200000,
+    'src': 'mostafa_el-abbadi'
   }},
   {"Colombia": {
     'trends': 'Manchester United', 
-    'volume': 100000
+    'volume': 100000,
+    'src': 'mostafa_el-abbadi'
   }},
   {"Norway": {
     'trends': 'Manchester United', 
-    'volume': 100000
+    'volume': 100000,
+    'src': ''
   }},
   {"Ukraine": {
     'trends': 'Суровикин', 
-    'volume': 10000
+    'volume': 10000,
+    'src': 'manchester_united'
   }},
   {"South Korea": {
     'trends': '나폴리', 
-    'volume': 10000
+    'volume': 10000,
+    'src': 'naples'
   }}
 ];
 
@@ -82,7 +102,6 @@ export default class Map {
     const query = new google.visualization.Query(
       'https://docs.google.com/spreadsheets/d/1LOD5EAr5K5u45ORZiafyk5k96aI_ByzYk-NkJM0k6do/gviz/tq?gid=0&headers=1&range=A:B'
       );
-
     query.send(this.handleQueryResponse);
   }
 
@@ -99,7 +118,7 @@ export default class Map {
       colorAxis: {colors: ['#b2ccf7', '#2272f5']},
       datalessRegionColor: '#ebf0f7',
       backgroundColor: ''
-    };
+    }
 
     const clickHandler = () => {
       const selection = chart.getSelection();
@@ -113,11 +132,10 @@ export default class Map {
         trendsObj = Object.values((COUNTRIES[row]));
       };
 
-      
-
       for (let i = 0; i < 5; i++) {
         let trends = Object.values(trendsObj[i])[0];
         let volume = Object.values(trendsObj[i])[1].toString();
+        let img = Object.values(trendsObj[i])[2];
         let volStr;
 
         if (volume > 999999) {
@@ -130,7 +148,7 @@ export default class Map {
 
         trendBox.innerHTML = `
         <div class="trend-content-wrapper">
-          <img src="" class="trend-img"></img>
+          <img class="trend-img" src="./${img}.jpg">
           <div class="trend-content">
             <h4>${trends}</h4>
             <p>${volStr}</p>
@@ -152,4 +170,6 @@ export default class Map {
 
     google.charts.setOnLoadCallback(this.drawRegionsMap);
   }
+
+  
 }
