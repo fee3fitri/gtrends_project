@@ -138,9 +138,22 @@ nav a {
 
 
 /* Trends style */
+#map-results #find {
+  margin-top: 27vh;
+  font-size: 3vw;
+  line-height: 1.2;
+}
+
 #map-results #trends-container {
   margin: 0 auto;
   width: 50%;
+  display: none;
+}
+
+#map-results #trends-container {
+  margin: 0 auto;
+  width: 50%;
+  display: none;
 }
 
 #map-results #trends-container #current-date {
@@ -149,15 +162,14 @@ nav a {
 
 #map-results #trends-container .trend-box {
   background-color: white;
-  padding: 10px 15px;
+  padding: 15px;
   border: 1px solid #d7d7d7;
-  // display: flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
   margin-top: 15px;
   margin-bottom: 15px;
   justify-content: space-between;
-  display: none;
 }
 
 #map-results #trends-container .trend-content-wrapper {
@@ -171,12 +183,11 @@ nav a {
 }
 
 #map-results #trends-container .trend-box .trend-img {
-  background-color: black;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   margin-right: 20px;
+  overflow: hidden;
 }
-
 
 /* Swiper Style */
 /* Swiper Container */

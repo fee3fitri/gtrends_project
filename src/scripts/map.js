@@ -91,6 +91,8 @@ const COUNTRIES = [
   }}
 ];
 
+
+
 export default class Map {
   constructor() {
     this.drawRegionsMap = this.drawRegionsMap.bind(this);
@@ -122,6 +124,8 @@ export default class Map {
 
     const clickHandler = () => {
       const selection = chart.getSelection();
+      const trendsContainer = document.querySelector("#trends-container");
+      const find = document.querySelector("#find");
       const trendBox = document.querySelector(".trend-box");
       const countryBox = document.querySelector("#country");
       let country, trendsObj;
@@ -145,12 +149,12 @@ export default class Map {
         }
 
         countryBox.innerHTML = country;
-        
-        trendBox.style.display = "flex";
+        trendsContainer.style.display = "block";
+        find.style.display = "none";
 
         trendBox.innerHTML = `
         <div class="trend-content-wrapper">
-          <img class="trend-img" src="./src/images/${img}.jpg">
+          <img class="trend-img">
           <div class="trend-content">
             <h4>${trends}</h4>
             <p>${volStr}</p>
@@ -158,7 +162,6 @@ export default class Map {
         </div>
         <i class="fa-solid fa-chevron-down"></i>`
       }
-
     }
     
     chart.draw(data, options);
@@ -173,6 +176,5 @@ export default class Map {
 
     google.charts.setOnLoadCallback(this.drawRegionsMap);
   }
-
   
 }

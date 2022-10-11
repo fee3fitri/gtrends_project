@@ -28,8 +28,9 @@
     </nav>
   </header>
 
+  <!-- Slider container -->
   <div class="swiper">
-    <!-- Additional required wrapper -->
+    <!-- Slider wrapper -->
     <div class="swiper-wrapper">
 
       <!-- Slides -->
@@ -44,7 +45,9 @@
         <div id="map-container">
           <div id="regions_div" style="width: 950px;"></div>
         </div>
-  
+        
+        <!-- Trend container -->
+        <h2 id="find">Find what's trending in each country</h2>
         <div id="trends-container">
           <h2>The Most Searched Topic</h2>
           <p id="current-date"></p>
@@ -52,12 +55,18 @@
           <div class="trend-box"></div>
           <div class="trend-video-container"></div>  
         </div>
+        <div id="related-video">
+          <ul class="videos"></ul>
+        </div>
       </section>
-      <div class="swiper-slide">
+
+      <!-- Third section: Dunno what -->
+      <section class="swiper-slide">
         <h1>What the world was searching in 2021</h1>
         <div class="year-trend"></div>
       </div>
-    </div>
+    </section>
+
     <!-- Slider pagination -->
     <div class="swiper-pagination"></div>
   </div>

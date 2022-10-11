@@ -8,3 +8,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const trends = new Trends();
   const slider = new Slider();
 });
+
