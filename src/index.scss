@@ -149,13 +149,15 @@ nav a {
 
 #map-results #trends-container .trend-box {
   background-color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: 1px solid #d7d7d7;
-  display: flex;
+  // display: flex;
   align-items: center;
   cursor: pointer;
   margin-top: 15px;
+  margin-bottom: 15px;
   justify-content: space-between;
+  display: none;
 }
 
 #map-results #trends-container .trend-content-wrapper {

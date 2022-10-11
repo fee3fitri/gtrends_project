@@ -145,10 +145,12 @@ export default class Map {
         }
 
         countryBox.innerHTML = country;
+        
+        trendBox.style.display = "flex";
 
         trendBox.innerHTML = `
         <div class="trend-content-wrapper">
-          <img class="trend-img" src="./${img}.jpg">
+          <img class="trend-img" src="./src/images/${img}.jpg">
           <div class="trend-content">
             <h4>${trends}</h4>
             <p>${volStr}</p>
@@ -156,6 +158,7 @@ export default class Map {
         </div>
         <i class="fa-solid fa-chevron-down"></i>`
       }
+
     }
     
     chart.draw(data, options);
