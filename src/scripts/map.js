@@ -1,95 +1,74 @@
 const COUNTRIES = [
-  {"United States": [
-    {'trends': 'Broncos', 'volume': 1000000},
-    {'trends': 'Omonia vs Man United', 'volume': 500000},
-    {'trends': 'Pixel 7', 'volume': 200000},
-    {'trends': 'Mario movie trailer', 'volume': 200000},
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 200000},
-]},
-  {"Canada": [
-    {'trends': 'Omonia vs Man United', 'volume': 100000},
-    {'trends': 'UCP leadership race', 'volume': 50000},
-    {'trends': 'Pixel 7', 'volume': 50000},
-    {'trends': 'Thailand', 'volume': 20000},
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 20000},
-  ]},
-  {"United Kingdom": [
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 500000},
-    {'trends': 'Velma', 'volume': 200000},
-    {'trends': 'Anderlecht vs West Ham', 'volume': 100000},
-    {'trends': 'Pixel 7', 'volume': 50000},
-    {'trends': 'Thailand', 'volume': 50000},
-  ]},
-  {"Ireland": [
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 20000},
-    {'trends': 'Velma', 'volume': 10000},
-    {'trends': 'Shamrock Rovers', 'volume': 10000},
-    {'trends': 'Irish dancing scandal', 'volume': 5000},
-    {'trends': 'Anderlecht vs West Ham', 'volume': 5000},
-  ]},
-  {"South Africa": [
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 100000},
-    {'trends': 'Velma', 'volume': 20000},
-    {'trends': 'Roma vs Real Betis', 'volume': 20000},
-    {'trends': 'Man Utd', 'volume': 20000},
-    {'trends': 'Anderlecht vs West Ham', 'volume': 20000},
-  ]},
-  {"Nigeria": [
-    {'trends': 'Chelsea vs Milan', 'volume': 200000},
-    {'trends': 'Roma vs Real Betis', 'volume': 20000},
-    {'trends': 'Man United', 'volume': 20000},
-    {'trends': 'Anderlecht vs West Ham', 'volume': 10000},
-    {'trends': 'Sheriff vs Real Sociedad', 'volume': 10000},
-  ]},
-  {"India": [
-    {'trends': 'Cricket Live', 'volume': 1000000},
-    {'trends': 'Man City', 'volume': 100000},
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 100000},
-    {'trends': 'Pixel 7', 'volume': 100000},
-    {'trends': 'Real Madrid', 'volume': 50000},
-  ]},
-  {"Singapore": [
-    {'trends': 'Real Madrid', 'volume': 20000},
-    {'trends': 'Man City', 'volume': 10000},
-    {'trends': 'Real Madrid vs Shakhtar Donetsk', 'volume': 10000},
-    {'trends': 'Pixel 7', 'volume': 10000},
-    {'trends': 'Thailand', 'volume': 10000},
-  ]},
-  {"Australia": [
-    {'trends': 'Omonia vs Man United', 'volume': 100000},
-    {'trends': 'Chelsea vs Milan', 'volume': 50000},
-    {'trends': 'Powerball Results', 'volume': 50000},
-    {'trends': 'Thailand', 'volume': 50000},
-    {'trends': 'Benfica vs PSG', 'volume': 50000},
-  ]},
-  {"New Zealand": [
-    {'trends': 'Omonia vs Man United', 'volume': 20000},
-    {'trends': 'Arsenal vs bodø/glimt', 'volume': 10000},
-    {'trends': 'Thailand', 'volume': 5000},
-    {'trends': 'Peter Ellis', 'volume': 2000},
-    {'trends': 'Megaland', 'volume': 2000},
-  ]},
-  {"Brazil": [
-    {'trends': 'Alexandre de Moraes', 'volume': 200000},
-    {'trends': 'Jogo de Palmeiras', 'volume': 100000},
-    {'trends': 'Noruega x Brasil', 'volume': 100000},
-    {'trends': 'Fernanda Montenegro', 'volume': 100000},
-    {'trends': 'Valencia', 'volume': 100000},
-  ]},
-  {"Russia": [
-    {'trends': 'Паша Техник', 'volume': 100000},
-    {'trends': 'Кот', 'volume': 20000},
-    {'trends': 'Байден', 'volume': 20000},
-    {'trends': 'Мемориал', 'volume': 20000},
-    {'trends': 'Никита Пресняков', 'volume': 20000},
-  ]},
-  {"Indonesia": [
-    {'trends': 'Maulid Nabi 2022', 'volume': 200000},
-    {'trends': 'Arsenal', 'volume': 50000},
-    {'trends': 'Agama Farel Prayoga', 'volume': 50000},
-    {'trends': 'Dadang Aremania', 'volume': 50000},
-    {'trends': 'BMKG', 'volume': 20000},
-  ]}
+  {"United States": {
+    'trends': 'Broncos', 
+    'volume': 1000000
+  }},
+  {"Canada": {
+    'trends': 'Omonia vs Man United', 
+    'volume': 100000
+  }},
+  {"United Kingdom": {
+    'trends': 'Arsenal vs bodø/glimt', 
+    'volume': 500000
+  }},
+  {"Ireland": {
+    'trends': 'Arsenal vs bodø/glimt', 
+    'volume': 20000
+  }},
+  {"South Africa": {
+    'trends': 'Arsenal vs bodø/glimt', 
+    'volume': 100000
+  }},
+  {"Nigeria": {'trends': 'Chelsea vs Milan', 
+    'volume': 200000
+  }},
+  {"India": {
+    'trends': 'Cricket Live', 
+    'volume': 1000000
+  }},
+  {"Singapore": 
+    {'trends': 'Real Madrid', 
+    'volume': 20000
+  }},
+  {"Australia": {
+    'trends': 'Omonia vs Man United', 
+    'volume': 100000
+  }},
+  {"New Zealand": {
+    'trends': 'Omonia vs Man United', 
+    'volume': 20000
+  }},
+  {"Brazil": 
+    {'trends': 'Alexandre de Moraes', 
+    'volume': 200000},
+  },
+  {"Russia": {
+    'trends': 'Паша Техник', 
+    'volume': 100000
+  }},
+  {"Indonesia": {
+    'trends': 'Maulid Nabi 2022', 
+    'volume': 200000
+  }},
+  {"Austria": {
+    'trends': 'Mostafa El-Abbadi', 'volume': 200000
+  }},
+  {"Colombia": {
+    'trends': 'Manchester United', 
+    'volume': 100000
+  }},
+  {"Norway": {
+    'trends': 'Manchester United', 
+    'volume': 100000
+  }},
+  {"Ukraine": {
+    'trends': 'Суровикин', 
+    'volume': 10000
+  }},
+  {"South Korea": {
+    'trends': '나폴리', 
+    'volume': 10000
+  }}
 ];
 
 export default class Map {
@@ -101,7 +80,7 @@ export default class Map {
   // Querying the map data from Google Spreadsheet
   drawRegionsMap() {
     const query = new google.visualization.Query(
-      'https://docs.google.com/spreadsheets/d/1LOD5EAr5K5u45ORZiafyk5k96aI_ByzYk-NkJM0k6do/gviz/tq?gid=0&headers=1&range=A1:B15'
+      'https://docs.google.com/spreadsheets/d/1LOD5EAr5K5u45ORZiafyk5k96aI_ByzYk-NkJM0k6do/gviz/tq?gid=0&headers=1&range=A:B'
       );
 
     query.send(this.handleQueryResponse);
@@ -131,18 +110,35 @@ export default class Map {
       for (let item of selection) {
         const row = item.row;
         country = data.getValue(row, 0);
-        trendsObj = Object.values((COUNTRIES[row]))[0];
+        trendsObj = Object.values((COUNTRIES[row]));
       };
 
-      countryBox.innerHTML = country;
+      
 
-      trendBox.innerHTML = `
-      <p>${Object.values(trendsObj[0])[0]}</p>
-      <p>${Object.values(trendsObj[1])[0]}</p>
-      <p>${Object.values(trendsObj[2])[0]}</p>
-      <p>${Object.values(trendsObj[3])[0]}</p>
-      <p>${Object.values(trendsObj[4])[0]}</p>`
-    };
+      for (let i = 0; i < 5; i++) {
+        let trends = Object.values(trendsObj[i])[0];
+        let volume = Object.values(trendsObj[i])[1].toString();
+        let volStr;
+
+        if (volume > 999999) {
+          volStr = `${volume.slice(0, -6)}M+ searches`
+        } else if (volume > 999) {
+          volStr = `${volume.slice(0, -3)}K+ searches`
+        }
+
+        countryBox.innerHTML = country;
+
+        trendBox.innerHTML = `
+        <div class="trend-content-wrapper">
+          <img src="" class="trend-img"></img>
+          <div class="trend-content">
+            <h4>${trends}</h4>
+            <p>${volStr}</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>`
+      }
+    }
     
     chart.draw(data, options);
     google.visualization.events.addListener(chart, 'select', clickHandler);

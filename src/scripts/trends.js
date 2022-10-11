@@ -3,6 +3,7 @@ export default class Trends {
     this.currentDate = document.getElementById("current-date")
     this.today = new Date();
     this.printDate();
+    this.getData();
   }
 
   printDate() {
@@ -37,5 +38,21 @@ export default class Trends {
     let year = this.today.getFullYear();
 
     this.currentDate.innerHTML = `${day}, ${month} ${date}, ${year}`;
+  }
+
+  getData() {
+    fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=Broncos&key=AIzaSyD0kC72miWGqBjXBdWTmtJqxjVlPeGtptg")
+    .then((videoResult) => {
+      return videoResult.json()
+    }).then((videoData) => {
+      let videos = videoData.items;
+      let trendVideoContainer = document.querySelector(".trend-video-container");
+
+      for (let video of videos) {
+        trendVideoContainer.innerHTML = `
+        <img src="${video.snippet.thumbnails.medium.url}">
+        <p>${video.snippet.title}</p>`
+      }
+    })
   }
 }

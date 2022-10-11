@@ -20,6 +20,12 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 1.3vw;
+  font-weight: bold; 
+  margin-bottom: 1vh;
+}
+
 
 /* Header section */
 header {
@@ -57,7 +63,7 @@ nav a {
 }
 
 #map-results #regions_div {
-  width: 900px;
+  width: 950px;
   margin-right: 5vw;
 }
 
@@ -77,31 +83,29 @@ nav a {
   padding: 10px 20px;
   border: 1px solid #d7d7d7;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   margin-top: 15px;
+  justify-content: space-between;
 }
 
-#map-results #trends-container .trend-box p {
-  display: block;
+#map-results #trends-container .trend-content-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 #map-results #trends-container .trend-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 #map-results #trends-container .trend-box .trend-img {
   background-color: black;
   width: 70px;
   height: 70px;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
-#map-results #trends-container .trend-box i {
-  margin-left: 5%;
-}
 
 
 /* Swiper Style */
