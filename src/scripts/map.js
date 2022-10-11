@@ -154,7 +154,7 @@ export default class Map {
 
         trendBox.innerHTML = `
         <div class="trend-content-wrapper">
-          <img class="trend-img">
+          <img class="trend-img" src="./src/images${img}.jpg">
           <div class="trend-content">
             <h4>${trends}</h4>
             <p>${volStr}</p>
