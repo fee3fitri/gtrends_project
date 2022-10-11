@@ -2,92 +2,110 @@ const COUNTRIES = [
   {"United States": {
     'trends': 'Broncos', 
     'volume': 1000000,
-    'src': 'broncos'
+    'src': 'broncos',
+    'video': 'q3FWuuV4xZE',
   }},
   {"Canada": {
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
-    'src': 'omonia_vs_man_united'
+    'src': 'omonia_vs_man_united',
+    'video': 'l4mouVbscZ0',
   }},
   {"United Kingdom": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 500000,
-    'src': 'arsenal_vs_glimt'
+    'src': 'arsenal_vs_glimt',
+    'video': 'l4mouVbscZ0',
   }},
   {"Ireland": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 20000,
-    'src': 'arsenal_vs_glimt'
+    'src': 'arsenal_vs_glimt',
+    'video': 'l4mouVbscZ0',
   }},
   {"South Africa": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 100000,
-    'src': 'arsenal_vs_glimt'
+    'src': 'arsenal_vs_glimt',
+    'video': 'l4mouVbscZ0',
   }},
   {"Nigeria": {
     'trends': 'Chelsea vs Milan', 
     'volume': 200000,
-    'src': 'chelsea_vs_milan'
+    'src': 'chelsea_vs_milan',
+    'video': 'l4mouVbscZ0',
   }},
   {"India": {
     'trends': 'Cricket Live', 
     'volume': 1000000,
-    'src': 'cricket'
+    'src': 'cricket',
+    'video': 'l4mouVbscZ0',
   }},
   {"Singapore": 
     {'trends': 'Real Madrid', 
     'volume': 20000,
-    'src': 'real_madrid'
+    'src': 'real_madrid',
+    'video': 'l4mouVbscZ0',
   }},
   {"Australia": {
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
-    'src': 'real_madrid'
+    'src': 'real_madrid',
+    'video': 'l4mouVbscZ0',
   }},
   {"New Zealand": {
     'trends': 'Omonia vs Man United', 
     'volume': 20000,
-    'src': 'omonia_vs_man_united'
+    'src': 'omonia_vs_man_united',
+    'video': 'l4mouVbscZ0',
   }},
   {"Brazil": 
     {'trends': 'Alexandre de Moraes', 
     'volume': 200000,
-    'src': 'alexandre_de_moraes'
+    'src': 'alexandre_de_moraes',
+    'video': 'l4mouVbscZ0',
 }},
   {"Russia": {
     'trends': 'Паша Техник', 
     'volume': 100000,
-    'src': 'pasha_tehnik'
+    'src': 'pasha_tehnik',
+    'video': 'l4mouVbscZ0',
   }},
   {"Indonesia": {
     'trends': 'Maulid Nabi 2022', 
     'volume': 200000,
-    'src': 'maulid_nabi'
+    'src': 'maulid_nabi',
+    'video': 'l4mouVbscZ0',
   }},
   {"Austria": {
     'trends': 'Mostafa El-Abbadi', 
     'volume': 200000,
-    'src': 'mostafa_el-abbadi'
+    'src': 'mostafa_el-abbadi',
+    'video': 'l4mouVbscZ0',
   }},
   {"Colombia": {
     'trends': 'Manchester United', 
     'volume': 100000,
-    'src': 'mostafa_el-abbadi'
+    'src': 'manchester_united',
+    'video': 'l4mouVbscZ0',
   }},
   {"Norway": {
     'trends': 'Manchester United', 
     'volume': 100000,
-    'src': ''
+    'src': 'manchester_united',
+    'video': 'l4mouVbscZ0',
   }},
   {"Ukraine": {
     'trends': 'Суровикин', 
     'volume': 10000,
-    'src': 'manchester_united'
+    'src': 'surobikin',
+    'video': 'l4mouVbscZ0',
   }},
   {"South Korea": {
     'trends': '나폴리', 
     'volume': 10000,
-    'src': 'naples'
+    'src': 'naples',
+    'video': 'l4mouVbscZ0',
   }}
 ];
 
@@ -124,10 +142,11 @@ export default class Map {
 
     const clickHandler = () => {
       const selection = chart.getSelection();
-      const trendsContainer = document.querySelector("#trends-container");
+      const trendsResults = document.querySelector("#trends-results");
       const find = document.querySelector("#find");
       const trendBox = document.querySelector(".trend-box");
       const countryBox = document.querySelector("#country");
+      const player = document.querySelector("#player");
       let country, trendsObj;
   
       for (let item of selection) {
@@ -140,6 +159,7 @@ export default class Map {
         let trends = Object.values(trendsObj[i])[0];
         let volume = Object.values(trendsObj[i])[1].toString();
         let img = Object.values(trendsObj[i])[2];
+        let video = Object.values(trendsObj[i])[3];
         let volStr;
 
         if (volume > 999999) {
@@ -149,7 +169,7 @@ export default class Map {
         }
 
         countryBox.innerHTML = country;
-        trendsContainer.style.display = "block";
+        trendsResults.style.display = "block";
         find.style.display = "none";
 
         trendBox.innerHTML = `
@@ -160,7 +180,9 @@ export default class Map {
             <p>${volStr}</p>
           </div>
         </div>
-        <i class="fa-solid fa-chevron-down"></i>`
+        <i class="fa-solid fa-chevron-down"></i>`;
+
+        player.setAttribute("src", `http://www.youtube.com/embed/${video}`)
       }
     }
     
