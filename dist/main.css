@@ -5,6 +5,7 @@
 :root {
   --color: #4285f4;
   --bg-color: #f7f7f7;
+  --font: "Source Serif Pro", serif ;
 }
 
 html, body {
@@ -59,7 +60,7 @@ header nav a {
   margin: 0 10px;
 }
 
-header nav i:hover {
+header #logo:hover, header nav i:hover {
   color: #2c394f;
 }
 
@@ -68,13 +69,13 @@ header nav i:hover {
   align-items: center;
   margin-top: -5vh;
   color: var(--color);
-  font-size: 5vw;
   flex-direction: column;
   justify-content: center;
 }
 
 #welcome h1 {
   font-family: "Source Serif Pro", serif;
+  font-size: 5vw;
   position: relative;
   padding-right: 10px;
   margin-bottom: 7vh;
@@ -135,6 +136,7 @@ header nav i:hover {
   margin-top: 27vh;
   font-size: 3vw;
   line-height: 1.2;
+  font-weight: bold;
 }
 
 #map-results #trends-results {
@@ -203,6 +205,74 @@ header nav i:hover {
   height: 100%;
 }
 
+/* Year Grid Style */
+#year-trend {
+  display: flex;
+  flex-direction: column;
+}
+
+#year-trend .page-title {
+  height: 40vh;
+}
+
+#year-trend h2 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+#year-trend #yearly-trend-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  position: relative;
+}
+
+#year-trend #yearly-trend-container .month {
+  opacity: 70%;
+  width: 40%;
+  height: 10vh;
+  padding: 10%;
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  perspective: 1000px;
+  background-color: var(--color);
+}
+
+#year-trend #yearly-trend-container .month .month-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#year-trend #yearly-trend-container .month:hover .month-inner {
+  transform: rotateY(180deg);
+}
+
+#year-trend #yearly-trend-container .month .month-inner .month-front,
+#year-trend #yearly-trend-container .month .month-inner .month-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#year-trend #yearly-trend-container .month .month-inner .month-front {
+  font-weight: 600;
+  font-size: 5vw;
+  font-family: var(--font);
+  background-color: var(--color);
+}
+
+#year-trend #yearly-trend-container .month .month-inner .month-back {
+  transform: rotateY(180deg);
+  background-color: var(--color);
+}
+
 /* Swiper Style */
 /* Swiper Container */
 .swiper {
@@ -217,7 +287,6 @@ header nav i:hover {
 
 .swiper-slide {
   display: flex;
-  justify-content: center;
 }
 
 .swiper-wrapper {

@@ -7,7 +7,6 @@ export default class Slider {
       speed: 900,
       spaceBetween: 100,
       loop: true,
-      mousewheel: true,
       keyboard: true,
       pagination: {
         el: '.swiper-pagination',
