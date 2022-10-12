@@ -99,29 +99,6 @@ nav a {
   animation: fadeIn 2s ease 5.5s forwards;
 }
 
-/* Animation */
-@keyframes typing {
-  80% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes blink {
-  100% {
-    background: transparent;
-  }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 /* Interactive map section */
 /* Map style */
@@ -132,7 +109,7 @@ nav a {
 }
 
 #map-results #regions_div {
-  width: 950px;
+  width: 900px;
   margin-right: 5vw;
 }
 
@@ -156,11 +133,11 @@ nav a {
   display: none;
 }
 
-#map-results #trends-results #current-date {
+#map-results #trends-results #trends-container #current-date {
   margin-bottom: 2vh;
 }
 
-#map-results #trends-results .trend-box {
+#map-results #trends-results #trends-container .trend-box {
   background-color: white;
   padding: 15px;
   border: 1px solid #d7d7d7;
@@ -172,21 +149,29 @@ nav a {
   justify-content: space-between;
 }
 
-#map-results #trends-results .trend-content-wrapper {
+#map-results #trends-results #trends-container .trend-box:hover {
+  background: #f0f0f0;
+}
+
+#map-results #trends-results #trends-container .trend-content-wrapper {
   display: flex;
   align-items: center;
 }
 
-#map-results #trends-results .trend-content {
+#map-results #trends-results #trends-container .trend-content {
   display: flex;
   flex-direction: column;
 }
 
-#map-results #trends-results .trend-box .trend-img {
+#map-results #trends-results #trends-container .trend-box .trend-img {
   width: 100px;
   height: 100px;
   margin-right: 20px;
   overflow: hidden;
+}
+
+#map-results #trends-results #related-video {
+  display: none;
 }
 
 /* Swiper Style */
@@ -270,4 +255,34 @@ nav a {
 .fa-brands {
   font-size: 1.5em;
   color: var(--color);
+}
+
+
+/* Animation */
+@keyframes typing {
+  80% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
 }

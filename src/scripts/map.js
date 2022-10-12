@@ -3,7 +3,7 @@ const COUNTRIES = [
     'trends': 'Broncos', 
     'volume': 1000000,
     'src': 'broncos',
-    'video': 'q3FWuuV4xZE',
+    'video': 'l4mouVbscZ0',
   }},
   {"Canada": {
     'trends': 'Omonia vs Man United', 
@@ -110,11 +110,11 @@ const COUNTRIES = [
 ];
 
 
-
 export default class Map {
   constructor() {
     this.drawRegionsMap = this.drawRegionsMap.bind(this);
     this.load();
+    this.showVideo();
   }
 
   // Querying the map data from Google Spreadsheet
@@ -140,13 +140,13 @@ export default class Map {
       backgroundColor: ''
     }
 
+    // What works when clicking the map
     const clickHandler = () => {
       const selection = chart.getSelection();
       const trendsResults = document.querySelector("#trends-results");
       const find = document.querySelector("#find");
       const trendBox = document.querySelector(".trend-box");
       const countryBox = document.querySelector("#country");
-      const player = document.querySelector("#player");
       let country, trendsObj;
   
       for (let item of selection) {
@@ -157,6 +157,7 @@ export default class Map {
 
       for (let i = 0; i < 5; i++) {
         let trends = Object.values(trendsObj[i])[0];
+        console.log(trendsObj, "trendsObj");
         let volume = Object.values(trendsObj[i])[1].toString();
         let img = Object.values(trendsObj[i])[2];
         let video = Object.values(trendsObj[i])[3];
@@ -180,9 +181,8 @@ export default class Map {
             <p>${volStr}</p>
           </div>
         </div>
-        <i class="fa-solid fa-chevron-down"></i>`;
-
-        player.setAttribute("src", `http://www.youtube.com/embed/${video}`)
+        <i class="fa-solid fa-chevron-down" id="arrow"></i>`;
+        player.setAttribute("src", `http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com`)
       }
     }
     
@@ -199,4 +199,13 @@ export default class Map {
     google.charts.setOnLoadCallback(this.drawRegionsMap);
   }
   
+  showVideo() {
+    const relatedVideo = document.querySelector("#related-video");
+    const trendsResults = document.querySelector("#trends-results");
+    const arrow = document.querySelector("#arrow");
+
+    trendsResults.addEventListener("click", function() {
+      relatedVideo.style.display = "block";
+     }.bind(relatedVideo))
+  }
 }

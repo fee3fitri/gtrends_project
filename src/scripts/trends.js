@@ -3,7 +3,7 @@ export default class Trends {
     this.currentDate = document.getElementById("current-date")
     this.today = new Date();
     this.printDate();
-    this.getData();
+    // this.getData();
   }
 
   printDate() {
@@ -40,22 +40,22 @@ export default class Trends {
     this.currentDate.innerHTML = `${day}, ${month} ${date}, ${year}`;
   }
 
-  getData() {
-    const relatedVideo = document.querySelector("#related-video");
+  // getData() {
+  //   const relatedVideo = document.querySelector("#related-video");
     
-    fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=Broncos&key=AIzaSyA2Qy_FSMydV5MtYLiLsVmTaGI2TGuw_KU")
-    .then((videoResult) => {
-      return videoResult.json()
-    }).then((videoData) => {
-      let videos = videoData.items;
+  //   fetch("https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=Broncos&key=AIzaSyA2Qy_FSMydV5MtYLiLsVmTaGI2TGuw_KU")
+  //   .then((videoResult) => {
+  //     return videoResult.json()
+  //   }).then((videoData) => {
+  //     let videos = videoData.items;
       
-      for (let video of videos) {
-        let title = video.snippet.title;
-        relatedVideo.innerHTML = `
-          <img src="${video.snippet.thumbnails.medium.url}">
-          <p>${title}</p>
-        `;
-      }
-    })
-  }
+  //     for (let video of videos) {
+  //       let title = video.snippet.title;
+  //       relatedVideo.innerHTML = `
+  //         <img src="${video.snippet.thumbnails.medium.url}">
+  //         <p>${title}</p>
+  //       `;
+  //     }
+  //   })
+  // }
 }
