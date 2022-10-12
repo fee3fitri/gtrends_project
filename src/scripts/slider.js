@@ -9,14 +9,18 @@ export default class Slider {
       loop: true,
       mousewheel: true,
       keyboard: true,
-      navigation: {
-        nexEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
-    })
+    });
+    this.reloadPage();
+  }
+
+  reloadPage() {
+    const bullet = document.querySelector('.swiper-pagination-bullet');
+    bullet.addEventListener("click", function() {
+      location.reload();
+    }.bind(location));
   }
 }

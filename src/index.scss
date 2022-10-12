@@ -7,6 +7,7 @@
 html, body {
   position: relative;
   height: 90vh;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -17,20 +18,24 @@ body {
 }
 
 h2 {
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   font-weight: bold;
   margin-bottom: 2vh;
 }
 
 h3 {
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   font-weight: bold; 
   margin-bottom: 1vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -48,10 +53,13 @@ header #logo {
   font-weight: bold;
 }
 
-nav a {
+header nav a {
   margin: 0 10px;
 }
 
+header nav i:hover {
+  color: #2c394f;
+}
 
 /* Welcome section */
 #welcome {
@@ -61,12 +69,18 @@ nav a {
   font-size: 5vw;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 #welcome h1 {
+  font-family: 'Source Serif Pro', serif;
   position: relative;
   padding-right: 10px;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
+}
+
+#welcome h2 {
+  font-size: 2vw;
 }
 
 #welcome h1::before,
@@ -123,7 +137,8 @@ nav a {
 
 #map-results #trends-results {
   margin: 0 auto;
-  width: 50%;
+  padding-top: 5vh;
+  width: 40%;
   display: none;
 }
 
@@ -134,7 +149,7 @@ nav a {
 }
 
 #map-results #trends-results #trends-container #current-date {
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
 }
 
 #map-results #trends-results #trends-container .trend-box {
@@ -163,6 +178,12 @@ nav a {
   flex-direction: column;
 }
 
+#map-results #trends-results #trends-container .trend-content #volume {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
 #map-results #trends-results #trends-container .trend-box .trend-img {
   width: 100px;
   height: 100px;
@@ -172,6 +193,7 @@ nav a {
 
 #map-results #trends-results #related-video {
   display: none;
+  margin-top: 5vh;
 }
 
 /* Swiper Style */

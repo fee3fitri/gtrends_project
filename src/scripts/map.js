@@ -3,109 +3,109 @@ const COUNTRIES = [
     'trends': 'Broncos', 
     'volume': 1000000,
     'src': 'broncos',
-    'video': 'l4mouVbscZ0',
+    'video': 'WvMm0kT4Pcs',
   }},
   {"Canada": {
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
     'src': 'omonia_vs_man_united',
-    'video': 'l4mouVbscZ0',
+    'video': 'umaxyiqjeaQ',
   }},
   {"United Kingdom": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 500000,
     'src': 'arsenal_vs_glimt',
-    'video': 'l4mouVbscZ0',
+    'video': 'AJWRycvQWts',
   }},
   {"Ireland": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 20000,
     'src': 'arsenal_vs_glimt',
-    'video': 'l4mouVbscZ0',
+    'video': 'AJWRycvQWts',
   }},
   {"South Africa": {
     'trends': 'Arsenal vs bodø/glimt', 
     'volume': 100000,
     'src': 'arsenal_vs_glimt',
-    'video': 'l4mouVbscZ0',
+    'video': 'AJWRycvQWts',
   }},
   {"Nigeria": {
     'trends': 'Chelsea vs Milan', 
     'volume': 200000,
     'src': 'chelsea_vs_milan',
-    'video': 'l4mouVbscZ0',
+    'video': 'mmI0njtDTrU',
   }},
   {"India": {
     'trends': 'Cricket Live', 
     'volume': 1000000,
     'src': 'cricket',
-    'video': 'l4mouVbscZ0',
+    'video': 'RmnxeOjprL4',
   }},
   {"Singapore": 
     {'trends': 'Real Madrid', 
     'volume': 20000,
     'src': 'real_madrid',
-    'video': 'l4mouVbscZ0',
+    'video': 'N2x0lWrCtX4',
   }},
   {"Australia": {
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
     'src': 'real_madrid',
-    'video': 'l4mouVbscZ0',
+    'video': 'VC_SEvkI7sw',
   }},
   {"New Zealand": {
     'trends': 'Omonia vs Man United', 
     'volume': 20000,
     'src': 'omonia_vs_man_united',
-    'video': 'l4mouVbscZ0',
+    'video': 'VC_SEvkI7sw',
   }},
   {"Brazil": 
     {'trends': 'Alexandre de Moraes', 
     'volume': 200000,
     'src': 'alexandre_de_moraes',
-    'video': 'l4mouVbscZ0',
+    'video': 'UmjbUXtHCTs',
 }},
   {"Russia": {
     'trends': 'Паша Техник', 
     'volume': 100000,
     'src': 'pasha_tehnik',
-    'video': 'l4mouVbscZ0',
+    'video': 'AlfktCE3T4g',
   }},
   {"Indonesia": {
     'trends': 'Maulid Nabi 2022', 
     'volume': 200000,
     'src': 'maulid_nabi',
-    'video': 'l4mouVbscZ0',
+    'video': 'LGTopk-UzY8',
   }},
   {"Austria": {
     'trends': 'Mostafa El-Abbadi', 
     'volume': 200000,
     'src': 'mostafa_el-abbadi',
-    'video': 'l4mouVbscZ0',
+    'video': '-VbL4rQuQ5w',
   }},
   {"Colombia": {
     'trends': 'Manchester United', 
     'volume': 100000,
     'src': 'manchester_united',
-    'video': 'l4mouVbscZ0',
+    'video': 'SMOjVeA7658',
   }},
   {"Norway": {
     'trends': 'Manchester United', 
     'volume': 100000,
     'src': 'manchester_united',
-    'video': 'l4mouVbscZ0',
+    'video': 'SMOjVeA7658',
   }},
   {"Ukraine": {
     'trends': 'Суровикин', 
     'volume': 10000,
     'src': 'surobikin',
-    'video': 'l4mouVbscZ0',
+    'video': 'HdlSzCDz-yg',
   }},
   {"South Korea": {
     'trends': '나폴리', 
     'volume': 10000,
     'src': 'naples',
-    'video': 'l4mouVbscZ0',
+    'video': 'mRUxcZ_K1eU',
   }}
 ];
 
@@ -157,16 +157,15 @@ export default class Map {
 
       for (let i = 0; i < 5; i++) {
         let trends = Object.values(trendsObj[i])[0];
-        console.log(trendsObj, "trendsObj");
         let volume = Object.values(trendsObj[i])[1].toString();
         let img = Object.values(trendsObj[i])[2];
         let video = Object.values(trendsObj[i])[3];
         let volStr;
 
         if (volume > 999999) {
-          volStr = `${volume.slice(0, -6)}M+ searches`
+          volStr = `${volume.slice(0, -6)}M+`
         } else if (volume > 999) {
-          volStr = `${volume.slice(0, -3)}K+ searches`
+          volStr = `${volume.slice(0, -3)}K+`
         }
 
         countryBox.innerHTML = country;
@@ -178,11 +177,11 @@ export default class Map {
           <img class="trend-img" src="./src/images/${img}.jpg">
           <div class="trend-content">
             <h4>${trends}</h4>
-            <p>${volStr}</p>
+            <p><span id="volume">${volStr}</span> searches</p>
           </div>
         </div>
         <i class="fa-solid fa-chevron-down" id="arrow"></i>`;
-        player.setAttribute("src", `http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com`)
+        player.setAttribute("src", `http://www.youtube.com/embed/${video}?enablejsapi=1&origin=http://example.com`)
       }
     }
     
@@ -201,11 +200,14 @@ export default class Map {
   
   showVideo() {
     const relatedVideo = document.querySelector("#related-video");
-    const trendsResults = document.querySelector("#trends-results");
-    const arrow = document.querySelector("#arrow");
-
-    trendsResults.addEventListener("click", function() {
-      relatedVideo.style.display = "block";
-     }.bind(relatedVideo))
+    const trendsContainer = document.querySelector("#trends-container");
+    
+    trendsContainer.addEventListener("click", function() {
+      if (relatedVideo.style.display === "block") {
+        relatedVideo.style.display = "none";
+      } else {
+        relatedVideo.style.display = "block";
+      }
+    }.bind(relatedVideo))
   }
 }
