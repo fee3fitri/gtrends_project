@@ -181,7 +181,8 @@ export default class Map {
           </div>
         </div>
         <i class="fa-solid fa-chevron-down" id="arrow"></i>`;
-        player.setAttribute("src", `http://www.youtube.com/embed/${video}?enablejsapi=1&origin=http://example.com`)
+
+        player.setAttribute("src", `http://www.youtube.com/embed/${video}`)
       }
     }
     
@@ -189,7 +190,6 @@ export default class Map {
     google.visualization.events.addListener(chart, 'select', clickHandler);
   }
 
-  // Show the map when the page is loaded
   load() {
     google.charts.load('current', {
       'packages':['geochart'],
