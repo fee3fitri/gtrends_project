@@ -21,7 +21,7 @@ const MONTHS = [
   {
     "month": "May",
     "content": "The world wanted to show up for its nurses. when is nurses week was searched at an all-time high in 2021 around the globe.",
-    "image": "",
+    "image": "none",
   },
   {
     "month": "June",
@@ -73,7 +73,7 @@ export default class Year {
       const month = Object.values(MONTHS[i])[0].slice(0,3);
       const content = Object.values(MONTHS[i])[1];
       const img = Object.values(MONTHS[i])[2];
-      const imgUrl = `url(src/images/${img}.jpg)`
+      const imgUrl = `url(src/images/${img}.jpg)`;
 
       const monthDiv = document.createElement("div");
       const monthInner = document.createElement("div");
@@ -96,10 +96,10 @@ export default class Year {
       monthFront.appendChild(h3);
       monthBack.appendChild(para);
 
-      if (img !== '') {
+      if (img) {
         monthBack.style.background = `
-          ${imgUrl} no-repeat fixed center top`;
-        
+          ${imgUrl} no-repeat fixed center top
+        `;
         para.style.color = "#2c394f";
       }
     }

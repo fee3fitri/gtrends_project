@@ -180,7 +180,8 @@ export default class Map {
             <p><span id="volume">${volStr}</span> searches</p>
           </div>
         </div>
-        <i class="fa-solid fa-chevron-down" id="arrow"></i>`;
+        <i class="fa-solid fa-chevron-down rotate" id="arrow"></i>
+        `;
 
         player.setAttribute("src", `https://www.youtube.com/embed/${video}`)
       }
@@ -208,6 +209,6 @@ export default class Map {
       } else {
         relatedVideo.style.display = "block";
       }
-    }.bind(relatedVideo))
+    }.bind(relatedVideo));
   }
 }

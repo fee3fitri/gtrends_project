@@ -9,7 +9,7 @@ export default class Slider {
       observeSlideChildren: true,
       speed: 900,
       spaceBetween: 100,
-      loop: true,
+      loop: false,
       keyboard: true,
       pagination: {
         el: '.swiper-pagination',
