@@ -46,6 +46,42 @@
   font-size: 2vw;
 }
 
+#direction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 5vh;
+  transform: translateY(5vh);
+  animation: fadeIn 2s ease 7s forwards;
+  opacity: 0;
+}
+
+#direction p {
+  color: var(--grey);
+  font-weight: bold;
+  margin-top: 10vh;
+}
+
+#direction .arrows {
+  margin-top: 3vh;
+}
+
+#direction .fa-solid {
+  background-color: var(--color);
+  color: var(--bg-color);
+  padding: 5px;
+  margin-left: .5vw;
+  border-radius: 5px;
+  opacity: .5;
+}
+
+#direction .fa-arrow-right-long {
+  transform: translateX(0);
+  animation: slide 4s ease 9s infinite;
+  opacity: 1;
+}
+
 
 /* Animation */
 @keyframes typing {
@@ -67,5 +103,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  50% {
+    transform: translateX(.75vw);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
