@@ -369,8 +369,9 @@ header #logo:hover, header nav i:hover {
 #year-container .month .month-inner .month-back p {
   color: var(--bg-color);
   padding: 10%;
-  line-height: 1.75vw;
+  line-height: 1.5vw;
   font-weight: bold;
+  font-size: 1vw;
 }
 
 /* Animation */
