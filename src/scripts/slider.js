@@ -1,5 +1,5 @@
 import Swiper from '../../node_modules/swiper/swiper-bundle.esm';
-import Year from './year'
+import Year from './year';
 
 export default class Slider {
   constructor(year) {
