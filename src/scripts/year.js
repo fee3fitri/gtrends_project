@@ -64,6 +64,7 @@ const MONTHS = [
 export default class Year {
   constructor() {
     this.createGrid();
+    this.randColor();
   }
   
   createGrid() {
@@ -102,6 +103,36 @@ export default class Year {
         `;
         para.style.color = "#2c394f";
       }
+    }
+  }
+
+  randColor() {
+    const yearContainer = document.getElementById("year-container");
+    const children = Array.from(yearContainer.children);
+    const randomCell = Math.floor(Math.random() * MONTHS.length);
+
+    const cells = [
+      {
+      "cell": randomCell,
+      "color": "#F4B400",
+      },
+      {
+      "cell": (randomCell + 5) % 12,
+      "color": "#DB4437",
+      },
+      {
+      "cell": (randomCell + 10) % 12,
+      "color": "#0F9D58",
+      },
+    ];
+
+    for (let i in cells) {
+      let cell = Object.values(cells[i])[0];
+      let color = Object.values(cells[i])[1];
+      
+      const inner = children[cell].querySelector(".month-inner");
+      const front = Array.from(inner.children)[0];
+      front.style.backgroundColor = color;
     }
   }
 }

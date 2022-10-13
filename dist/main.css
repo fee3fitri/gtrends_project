@@ -343,7 +343,6 @@ header #logo:hover, header nav i:hover {
   font-weight: 600;
   font-size: 4vw;
   font-family: var(--font);
-  background-color: var(--color);
   color: var(--bg-color);
 }
 
