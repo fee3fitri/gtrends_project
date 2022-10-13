@@ -45,7 +45,7 @@ const MONTHS = [
   },
   {
     "month": "October",
-    "content": "Couldn’t refresh the feed? Due to global outages across several social media platforms, down today searches reached an all-time high in 2021 worldwide.",
+    "content": "Due to global outages across several social media platforms, down today searches reached an all-time high in 2021 worldwide.",
     "image": "none",
   },
   {
