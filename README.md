@@ -14,6 +14,10 @@ gTrends is an app where user can find the most trending keyword search on Google
 3. Navigation
 - User can swipe left/right or clicking the bullet navigation at the bottom of the page to go to different pages
 
+![image](https://user-images.githubusercontent.com/110148438/195704698-35d69ef9-04d1-4b20-9956-524adb80621f.png)
+![image](https://user-images.githubusercontent.com/110148438/195704497-612749c6-02fb-4b71-9771-eb4bc4d422e4.png)
+![image](https://user-images.githubusercontent.com/110148438/195704606-1bd87467-c2c3-4a80-a9cc-04928689d9ff.png)
+
 
 In addition, this project will include:
 -	A production README
