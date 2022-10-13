@@ -182,7 +182,7 @@ export default class Map {
         </div>
         <i class="fa-solid fa-chevron-down" id="arrow"></i>`;
 
-        player.setAttribute("src", `http://www.youtube.com/embed/${video}`)
+        player.setAttribute("src", `https://www.youtube.com/embed/${video}`)
       }
     }
     
