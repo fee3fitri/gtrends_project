@@ -6,7 +6,7 @@ const MONTHS = [
   {
     "month": "February",
     "content": "Blackouts across the globe caused searches for power outage to increase 5,000% worldwide in February.",
-    "image": "",
+    "image": "none",
   },
   {
     "month": "March",
@@ -16,7 +16,7 @@ const MONTHS = [
   {
     "month": "April",
     "content": "This March, the world was captivated by the Meghan and Harry interview with Oprah, making it the most searched interview in Google Trends history.",
-    "image": "",
+    "image": "harry_meghan",
   },
   {
     "month": "May",
@@ -26,7 +26,7 @@ const MONTHS = [
   {
     "month": "June",
     "content": "We’re going to the moon! U.S. search interest for what is a meme stock was 10X higher in 2021 compared to the previous year.",
-    "image": "",
+    "image": "stock",
   },
   {
     "month": "July",
@@ -36,7 +36,7 @@ const MONTHS = [
   {
     "month": "August",
     "content": "Search interest for when can i get a covid booster increased 10X from July to August globally.",
-    "image": "",
+    "image": "covid",
   },
   {
     "month": "September",
@@ -46,17 +46,17 @@ const MONTHS = [
   {
     "month": "October",
     "content": "Couldn’t refresh the feed? Due to global outages across several social media platforms, down today searches reached an all-time high in 2021 worldwide.",
-    "image": "",
+    "image": "none",
   },
   {
     "month": "November",
     "content": "This November, small business saturday near me was a global breakout search.",
-    "image": "",
+    "image": "small_business",
   },
   {
     "month": "December",
     "content": "Globally, omicron symptoms was searched 9X more than cold symptoms this December.",
-    "image": "",
+    "image": "omicron",
   },
 ];
 
@@ -75,10 +75,10 @@ export default class Year {
       const img = Object.values(MONTHS[i])[2];
       const imgUrl = `url(src/images/${img}.jpg)`
 
-      const monthDiv = document.createElement("div")
-      const monthInner = document.createElement("div")
-      const monthFront = document.createElement("div")
-      const monthBack = document.createElement("div")
+      const monthDiv = document.createElement("div");
+      const monthInner = document.createElement("div");
+      const monthFront = document.createElement("div");
+      const monthBack = document.createElement("div");
       const h3 = document.createElement("h3");
       const para = document.createElement("p");
       
@@ -99,6 +99,8 @@ export default class Year {
       if (img !== '') {
         monthBack.style.background = `
           ${imgUrl} no-repeat fixed center top`;
+        
+        para.style.color = "#2c394f";
       }
     }
   }
