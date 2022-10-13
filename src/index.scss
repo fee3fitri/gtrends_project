@@ -295,10 +295,11 @@ header #logo:hover, header nav i:hover {
 }
 
 #year-trend #year-container .month .month-inner .month-back p {
-  color: var(--bg-color);
+  color: var(--grey);
   padding: 10%;
   line-height: 1.75vw;
   letter-spacing: .1vw;
+  font-weight: bold;
 }
 
 

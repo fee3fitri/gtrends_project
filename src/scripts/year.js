@@ -73,7 +73,7 @@ export default class Year {
       const month = Object.values(MONTHS[i])[0].slice(0,3);
       const content = Object.values(MONTHS[i])[1];
       const img = Object.values(MONTHS[i])[2];
-      const imgUrl = `url(./src/images/${img}.jpg)`
+      const imgUrl = `url(src/images/${img}.jpg)`
 
       const monthDiv = document.createElement("div")
       const monthInner = document.createElement("div")
@@ -97,7 +97,8 @@ export default class Year {
       monthBack.appendChild(para);
 
       if (img !== '') {
-        monthFront.style.backgroundImage = imgUrl;
+        monthBack.style.background = `
+          ${imgUrl} no-repeat fixed center top`;
       }
     }
   }
