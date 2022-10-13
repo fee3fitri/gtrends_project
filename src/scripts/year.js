@@ -67,13 +67,48 @@ export default class Year {
   }
   
   createGrid() {
-    const year = document.querySelector("#yearly-trend-container");
-    const len = MONTHS.length;
+    const yearContainer = document.getElementById("year-container");
     
-    for (let i = 0; i < len; i++) {
-      let item = document.getElementsByClassName("item");
-      item.setAttribute("id", "MONTHS[i].month");
-      console.log(`${MONTHS[i].month.slice(0,3)}.`);
+    
+    for (let i in MONTHS) {
+      const month = Object.values(MONTHS[i])[0].slice(0,3);
+      const content = Object.values(MONTHS[i])[1];
+
+      const monthDiv = document.createElement("div")
+      const monthInner = document.createElement("div")
+      const monthFront = document.createElement("div")
+      const monthBack = document.createElement("div")
+      const h3 = document.createElement("h3");
+      const para = document.createElement("p");
+      
+      monthDiv.classList.add("month");
+      monthInner.classList.add("month-inner");
+      monthFront.classList.add("month-front");
+      monthBack.classList.add("month-back");
+
+      h3.innerText = month;
+      para.innerText = content;
+
+      yearContainer.appendChild(monthDiv);
+      monthDiv.appendChild(monthInner);
+      monthInner.append(monthFront, monthBack);
+      monthFront.appendChild(h3);
+      monthBack.appendChild(para);
+
+      
+      // yearContainer.innerHTML = `
+      //   <div class="month">
+      //     <div class="month-inner">
+      //       <div class="month-front">
+      //         <h3>${month}</h3>
+      //       </div>
+      //       <div class="month-back">
+      //         <p>${content}</p>
+      //       </div>
+      //     </div>
+      //   </div>
+      // `;
+
     }
   }
 }

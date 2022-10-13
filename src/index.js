@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mapContainer = document.getElementById("regions_div");
   const map = new Map();
   const trends = new Trends();
-  const slider = new Slider();
   const year = new Year();
+  const slider = new Slider(year);
 });
 

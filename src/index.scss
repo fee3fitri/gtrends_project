@@ -216,66 +216,84 @@ header #logo:hover, header nav i:hover {
 }
 
 #year-trend .page-title {
-  height: 40vh;
+  margin-top: 20vh;
 }
 
-#year-trend h2 {
+#year-trend .page-title h2 {
   font-size: 2.5vw;
   font-weight: bold;
   text-align: center;
 }
 
-#year-trend #yearly-trend-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  position: relative;
+#year-trend .page-title span {
+  font-size: 2.75vw;
+  font-weight: bold;
+  color: var(--color);
 }
 
-#year-trend #yearly-trend-container .month {
+#year-trend #year-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 20vh;
+}
+
+#year-trend #year-container .month {
   opacity: 70%;
-  width: 40%;
-  height: 10vh;
-  padding: 10%;
-  color: var(--bg-color);
+  height: 30vh;
   border: none;
   cursor: pointer;
   display: flex;
   perspective: 1000px;
-  background-color: var(--color);
 }
 
 
-#year-trend #yearly-trend-container .month .month-inner {
+#year-trend #year-container .month .month-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
-#year-trend #yearly-trend-container .month:hover .month-inner {
+#year-trend #year-container .month:hover .month-inner {
   transform: rotateY(180deg);
 }
 
-#year-trend #yearly-trend-container .month .month-inner .month-front,
-#year-trend #yearly-trend-container .month .month-inner .month-back {
+#year-trend #year-container .month .month-inner .month-front,
+#year-trend #year-container .month .month-inner .month-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
-#year-trend #yearly-trend-container .month .month-inner .month-front {
+#year-trend #year-container .month .month-inner .month-front {
   font-weight: 600;
   font-size: 5vw;
   font-family: var(--font);
   background-color: var(--color);
 }
 
-#year-trend #yearly-trend-container .month .month-inner .month-back {
+#year-trend #year-container .month .month-inner .month-front h3 {
+  padding: 5%;
+  font-weight: 600;
+  font-size: 5vw;
+  font-family: var(--font);
+  background-color: var(--color);
+  color: var(--bg-color);
+}
+
+#year-trend #year-container .month .month-inner .month-back {
   transform: rotateY(180deg);
   background-color: var(--color);
+  display: flex;
+  align-items: center;
+}
+
+#year-trend #year-container .month .month-inner .month-back p {
+  color: var(--bg-color);
+  padding: 8%;
+  line-height: 1.75vw;
 }
 
 
