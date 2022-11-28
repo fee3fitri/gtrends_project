@@ -1,0 +1,91 @@
+/* Map section */
+#map-results {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4vh;
+}
+
+#map-container {
+  width: 50vw;
+  margin-right: 5vw;
+}
+
+#regions_div {
+  width: 130%;
+  position: relative;
+}
+
+
+/* Trends section */
+#find {
+  margin-top: 27vh;
+  font-size: 3vw;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+#trends-results {
+  margin: 0 auto;
+  width: 45vw;
+  display: none;
+}
+
+#trends-results #trends-container #current-date {
+  margin-bottom: 5vh;
+}
+
+#trends-results #trends-container .trend-box {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #d7d7d7;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+#trends-results #trends-container .trend-box:hover {
+  background: #f0f0f0;
+}
+
+#trends-results #trends-container .trend-content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#trends-results #trends-container .trend-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#trends-results #trends-container .trend-content #volume {
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+#trends-results #trends-container .trend-box .trend-img {
+  width: 20%;
+  height: 90%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+#trends-results #related-video {
+  display: none;
+  margin-top: 5vh;
+  width: 30vw;
+  height: 35vh;
+}
+
+#trends-results h2 {
+  font-size: 1.5vw;
+}
+
+#trends-results #related-video iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,100 @@
+#year-trend {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3vh;
+}
+
+.page-title span {
+  font-weight: bold;
+  color: var(--color);
+}
+
+#year-container {
+  margin-top: 3vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+#year-container .month {
+  height: 25vh;
+  border: none;
+  cursor: pointer;
+  perspective: 1000px;
+  opacity: .9;
+  margin: 1%;
+}
+
+
+#year-container .month .month-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#year-container .month:hover .month-inner {
+  transform: rotateY(180deg);
+}
+
+#year-container .month .month-inner .month-front,
+#year-container .month .month-inner .month-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+#year-container .month .month-inner .month-front {
+  font-weight: 600;
+  font-size: 5vw;
+  font-family: var(--font);
+  background-color: var(--color);
+}
+
+#year-container .month .month-inner .month-front h3 {
+  padding: 10%;
+  font-weight: 600;
+  font-size: 4vw;
+  font-family: var(--font);
+  color: var(--bg-color);
+}
+
+#year-container .month .month-inner .month-back {
+  transform: rotateY(180deg);
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+}
+
+#year-container .month .month-inner .month-back::after {
+  content: "";
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#year-container .month .month-inner .month-back p {
+  color: var(--bg-color);
+  padding: 10%;
+  line-height: 1.5vw;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+/* Animation */
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}

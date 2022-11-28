@@ -2,20 +2,24 @@
 
 
 ## Background
-gTrends is an app where users can find Google trends metrics by keyword. Search bar on the homepage will allow users to input their keyword. After users click the search button, an animated line chart and map will be provided. On the map, users are able to highlight the regions and see metrics of the highlighted region. Underneath the line chart, keywords related to the trends results will be provided.
+gTrends is an app where user can find the most trending keyword search on Google search. It allows user to interact with the map and find the most searched topic for a particular country. It also shows the search trends for every month in 2021.			
 
 
 ## Functionality & MVPs
-In gTrends, users will be able to:
--	find the keyword trends metrics
--	interact with the line chart which represents the trends over period of time
--	interact with the map which represents the trends by the region
--	see daily keyword trends
--	see related keyword search
--	go to Google search results when clicking the link on the keyword
+1. Map Section
+- User can interact with the map to see the most searched keywords on that day in particular countries.
+- Whenever user clicks a particular country on the map, the current date and the most searched topic box will appear. The content will change according to the data for that particular country.
+2. 2021 Monthly Card Section
+- User can interact on each card to reveal its monthly trends.
+3. Navigation
+- User can swipe left/right or clicking the bullet navigation at the bottom of the page to go to different pages
+
+![image](https://user-images.githubusercontent.com/110148438/195704698-35d69ef9-04d1-4b20-9956-524adb80621f.png)
+![image](https://user-images.githubusercontent.com/110148438/195704497-612749c6-02fb-4b71-9771-eb4bc4d422e4.png)
+![image](https://user-images.githubusercontent.com/110148438/195704606-1bd87467-c2c3-4a80-a9cc-04928689d9ff.png)
+
 
 In addition, this project will include:
--	An About modal describing the functionality of this app
 -	A production README
 
 
@@ -26,29 +30,38 @@ https://wireframe.cc/pro/edit/588560
 ## Technologies, Libraries, APIs
 -	HTML5
 -	CSS3
--	Vanilla JS
--	Google Trends API (or using CSV file as a data source)
+-	Vanilla JavaScript
 -	GeoChart API
--	Chart.js
+- Google spreadsheet (as the map data source)
+-	Swiper JS
 
 
 ## Implementation Timeline
 ### Friday Afternoon & Weekend
-Setup project, including getting webpack up and running. Setup Google Trends API and spend time getting comfortable with Chart.js. Get the line chart shown on the project. Or in case if the API doesn’t work, try to setup the data source in CSV file and connect it to the project through JavaScript.
+- Setup project, including getting webpack up and running. 
+- Extract the necessary data to Spreadsheet and convert it to JS object.
+- Setup GeoChart API and connect the Spreadsheet data to GeoChart.
+- Design and create map and trends layout.
 
 ### Monday
-Dedicate this day toward setting up the map to be able to interact with user. Get the map shown on the project.
+- Get the map and trends functionality works
+- Add welcome animation and bullet/sliding navigation
 
 ### Tuesday
-Implementing user control and focus on styling.
+- Add page styling
+- Add responsive feature
+- Add related video data and features
 
 ### Wednesday
-Adding related keyword trends on the map metrics. If time allows, start working on bonuses.
+- Add and style flipping card features to the third page
 
 ### Thursday Morning
-Deploy to GitHub pages. If time allows, rewrite this proposal as a production README.
+- Deploy to GitHub pages.
+- Rewrite this proposal as a production README.
 
 
 ## Bonuses
--	Adding animated counter to show Googgle traffic per minute
--	Make the app responsive
+- Welcome animation
+- Bullet navigation 
+- The page is reloaded whenever user goes to the first slide without refreshing the page
+- Semi responsive page (only works for landscape orientation)

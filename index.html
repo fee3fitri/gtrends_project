@@ -20,55 +20,89 @@
   <!-- Style link -->
   <link rel="stylesheet" href="./src/styles/reset.css">
   <link rel="stylesheet" href="./dist/main.css">
-  
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+
   <!-- JS scripts -->
   <script src="./dist/main.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://kit.fontawesome.com/e4095fb22d.js" crossorigin="anonymous"></script>
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
   <title>gTrends</title>
 </head>
 
 <body>
+
   <header>
   <!-- Header section -->
-    <h3 id="logo">gTrends</h3>
+    <a href="#welcome"><h3 id="logo">gTrends</h3></a>
     <nav>
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/safitri-shelton/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/fee3fitri" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.facebook.com/safitri.shelton" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </nav>
   </header>
 
+  <!-- Slider container -->
   <div class="swiper">
-    <!-- Additional required wrapper -->
+    <!-- Slider wrapper -->
     <div class="swiper-wrapper">
 
       <!-- Slides -->
       <!-- Welcome section -->
-      <section class="swiper-slide" id="hello">
-        <h1>Welcome to<br>gTrends</h1>
+      <section class="swiper-slide" id="welcome">
+        <h1>Welcome to gTrends.</h1>
+        <h2>Explore what the world is googling</h2>
+        <div id="direction">
+          <p>Use arrow keys or click the circles to navigate</p>
+          <div class="arrows">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+        </div>
       </section>
 
       <!-- Interactive map section -->
       <section class="swiper-slide" id ="map-results">
         <div id="map-container">
-          <div id="regions_div" style="width: 900px;"></div>
+          <div id="regions_div" style="width: 125%;"></div>
         </div>
-  
-        <div id="trends-container">
-          <h2>Daily Search Trends</h2>
-          <p id="current-date"></p>
-          <h3 id="country"></h3>
-          <div class="trend-box"></div>  
+        
+        <!-- Trend container -->
+        <h1 id="find">Find what's trending in each country</h1>
+        <div id="trends-results">
+          <div id="trends-container">
+            <h2>The Most Searched Topic</h2>
+            <p id="current-date"></p>
+            <h3 id="country"></h3>
+            <div class="trend-box"></div>  
+          </div>
+          <div id="related-video">
+            <h2>Related Video</h2>
+            <iframe id="player" 
+              type="text/html" 
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
         </div>
       </section>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
 
-    <!-- Slider section -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+      <!-- Yearly search trend -->
+      <section class="swiper-slide" id="year-trend">
+        <div class="page-title">
+          <h2>Discover what the world was searching for <span>2021</span>.</h2>
+        </div>
+
+        <div id="year-container">
+        </div>
+      </div>
+    </section>
 
     <!-- Slider pagination -->
     <div class="swiper-pagination"></div>
