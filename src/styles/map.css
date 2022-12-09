@@ -16,6 +16,10 @@
   height: 900px;
 }
 
+#regions_div path[fill="#ebf0f7"] {
+  cursor: auto;
+}
+
 
 /* Trends section */
 #find {
