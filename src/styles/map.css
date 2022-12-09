@@ -13,6 +13,7 @@
 #regions_div {
   width: 130%;
   position: relative;
+  cursor: pointer;
 }
 
 
@@ -67,10 +68,11 @@
 }
 
 #trends-results #trends-container .trend-box .trend-img {
-  width: 20%;
-  height: 90%;
+  width: 7vw;
+  height: 7vw;
   margin-right: 20px;
   overflow: hidden;
+  object-fit: cover;
 }
 
 #trends-results #related-video {
