@@ -137,7 +137,8 @@ export default class Map {
     const options = {
       colorAxis: {colors: ['#b2ccf7', '#2272f5']},
       datalessRegionColor: '#ebf0f7',
-      backgroundColor: ''
+      backgroundColor: '',
+      tooltip: {isHtml: true}
     }
 
     // What works when clicking the map
