@@ -313,6 +313,7 @@ header #logo:hover, header nav i:hover {
 
  .google-visualization-tooltip {
     transform: translate(5vw, 10vh) !important;
+    pointer-events: none;
   }
 }
 
