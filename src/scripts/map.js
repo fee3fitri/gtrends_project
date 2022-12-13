@@ -1,15 +1,15 @@
 const COUNTRIES = [
   {"United States": {
-    'trends': 'Broncos', 
-    'volume': 1000000,
-    'src': 'broncos',
-    'video': 'WvMm0kT4Pcs',
+    'trends': 'Chris Beard', 
+    'volume': 200000,
+    'src': 'chris_beard',
+    'video': 'Cn-LOUDt5HM',
   }},
   {"Canada": {
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
     'src': 'omonia_vs_man_united',
-    'video': 'umaxyiqjeaQ',
+    'video': 'csaTKju1PkA',
   }},
   {"United Kingdom": {
     'trends': 'Arsenal vs bodø/glimt', 
@@ -36,10 +36,10 @@ const COUNTRIES = [
     'video': 'mmI0njtDTrU',
   }},
   {"India": {
-    'trends': 'Cricket Live', 
+    'trends': 'Maria Telkes', 
     'volume': 1000000,
-    'src': 'cricket',
-    'video': 'RmnxeOjprL4',
+    'src': 'maria_telkes',
+    'video': 'FX5aPfji3Lk',
   }},
   {"Singapore": 
     {'trends': 'Real Madrid', 
@@ -51,13 +51,13 @@ const COUNTRIES = [
     'trends': 'Omonia vs Man United', 
     'volume': 100000,
     'src': 'real_madrid',
-    'video': 'VC_SEvkI7sw',
+    'video': 'csaTKju1PkA',
   }},
   {"New Zealand": {
     'trends': 'Omonia vs Man United', 
     'volume': 20000,
     'src': 'omonia_vs_man_united',
-    'video': 'VC_SEvkI7sw',
+    'video': 'csaTKju1PkA',
   }},
   {"Brazil": 
     {'trends': 'Alexandre de Moraes', 
@@ -99,14 +99,86 @@ const COUNTRIES = [
     'trends': 'Суровикин', 
     'volume': 10000,
     'src': 'surobikin',
-    'video': 'HdlSzCDz-yg',
+    'video': 'oPWhTg5RDhc',
   }},
   {"South Korea": {
     'trends': '나폴리', 
     'volume': 10000,
     'src': 'naples',
     'video': 'mRUxcZ_K1eU',
-  }}
+  }},
+  {"Belarus": {
+    'trends': 'Торговый центр в Балашихе. Пожар', 
+    'volume': 5000,
+    'src': 'fire',
+    'video': 'ObBhwPKG-wY',
+  }},
+  {"Turkmenistan": {
+    'trends': 'Çağrı Bey', 
+    'volume': 5000,
+    'src': 'cagri_bey',
+    'video': 'RfCbxLE1xCU',
+  }},
+  {"Sudan": {
+    'trends': 'Najib Balala', 
+    'volume': 5000,
+    'src': 'najib_balala',
+    'video': 'QM_RwSfjcBs',
+  }},
+  {"Tanzania": {
+    'trends': 'Najib Balala', 
+    'volume': 5000,
+    'src': 'najib_balala',
+    'video': 'QM_RwSfjcBs',
+  }},
+  {"Congo": {
+    'trends': '', 
+    'volume': 5000,
+    'src': '',
+    'video': '',
+  }},
+  {"Ethiopia": {
+    'trends': 'Mateu Lahoz', 
+    'volume': 5000,
+    'src': 'mateu _lahoz',
+    'video': 'dwm28okfceA',
+  }},
+  {"Germany": {
+    'trends': 'Wolfgang Schäuble', 
+    'volume': 5000,
+    'src': 'wolfgang_schäuble',
+    'video': '2HEc_rJQKCQ',
+  }},
+  {"Azerbaijan": {
+    'trends': 'Çağrı Bey', 
+    'volume': 5000,
+    'src': 'cagri_bey',
+    'video': 'RfCbxLE1xCU',
+  }},
+  {"China": {
+    'trends': '流行病', 
+    'volume': 5000,
+    'src': 'pandemic',
+    'video': 'pACGrFZycmY',
+  }},
+  {"Congo": {
+    'trends': 'Mateu Lahoz', 
+    'volume': 5000,
+    'src': 'mateu _lahoz',
+    'video': 'dwm28okfceA',
+  }},
+  {"Argentina": {
+    'trends': 'Argentina vs Croacia', 
+    'volume': 200000,
+    'src': 'arg_cro',
+    'video': 'yP3ywBoTNG4',
+  }},
+  {"United Arab Emirates": {
+    'trends': '2022 كأس العالم قطر', 
+    'volume': 100000,
+    'src': 'world_cup',
+    'video': 'nzM2FUu78qA',
+  }},
 ];
 
 
