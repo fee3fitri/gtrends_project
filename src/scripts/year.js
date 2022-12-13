@@ -109,30 +109,27 @@ export default class Year {
   randColor() {
     const yearContainer = document.getElementById("year-container");
     const children = Array.from(yearContainer.children);
-    const randomCell = Math.floor(Math.random() * MONTHS.length);
 
     const cells = [
       {
-      "cell": randomCell,
-      "color": "#F4B400",
+      "cell": [0, 3, 6, 9],
+      "color": "#F4B400", // yellow
       },
       {
-      "cell": (randomCell + 5) % 12,
-      "color": "#DB4437",
-      },
-      {
-      "cell": (randomCell + 10) % 12,
-      "color": "#0F9D58",
+      "cell": [1, 4, 7, 10],
+      "color": "#0F9D58", // green
       },
     ];
 
     for (let i in cells) {
-      let cell = Object.values(cells[i])[0];
+      let cellNums = Object.values(cells[i])[0];
       let color = Object.values(cells[i])[1];
       
-      const inner = children[cell].querySelector(".month-inner");
-      const front = Array.from(inner.children)[0];
-      front.style.backgroundColor = color;
+      for (let j of cellNums) {
+        const inner = children[j].querySelector(".month-inner");
+        const front = Array.from(inner.children)[0];
+        front.style.backgroundColor = color;
+      }
     }
   }
 }
