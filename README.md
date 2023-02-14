@@ -30,3 +30,32 @@
 - Bullet navigation 
 - The page is reloaded whenever user goes to the first slide without refreshing the page
 - Semi responsive page (only works for landscape orientation)
+
+## Code Sample
+### Querying Map from Extrnal Google Sheets
+```javascript
+drawRegionsMap() {
+    const query = new google.visualization.Query(
+      'https://docs.google.com/spreadsheets/d/1LOD5EAr5K5u45ORZiafyk5k96aI_ByzYk-NkJM0k6do/gviz/tq?gid=0&headers=1&range=A:B'
+      );
+    query.send(this.handleQueryResponse);
+  }
+```
+
+### Creating and customizing the map based on spreadsheet data and map options
+```javascript
+handleQueryResponse(response) {
+    if (response.isError()) {
+      alert(`Error in query: ${response.getMessage()} + ${response.getDetailedMessage()}`);
+      return;
+    }
+  
+    const data = response.getDataTable();
+    const chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+    const options = {
+      colorAxis: {colors: ['#b2ccf7', '#2272f5']},
+      datalessRegionColor: '#ebf0f7',
+      backgroundColor: '',
+      tooltip: {isHtml: true}
+    }
+```
